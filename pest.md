@@ -13,10 +13,8 @@ timezone: Asia/Shanghai
 
 <!-- Content_START -->
 
-### 2024.07.11
+### 2024.09.07
 
-笔记内容
-
-### 2024.07.12
+观看了Aptos共学的直播，本地安装了Aptos CLI，明天开始Code~
 
 <!-- Content_END -->
