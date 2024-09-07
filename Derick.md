@@ -8,7 +8,9 @@
 <!-- Content_START -->
 
 ### 2024.09.07
- -  [ ] 
+ -  [x] 推荐的aptos钱包  ：https://petra.app/
+ -  [x] 在jbIDE中安装move on aptos
+ -  [x] move[学习文档](https://aptos.dev/en/build/smart-contracts/why-move)  
 ### 2024.09.08
  -  [ ] 
 ### 2024.09.09
