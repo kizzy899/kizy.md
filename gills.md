@@ -60,9 +60,8 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 <!-- Content_START -->
 
-### 2024.07.11
-
-笔记内容
+### 2024.09.07
+加入了aptos move共学。明天开始搭建环境并且跑通实例。
 
 ### 2024.07.12
 
