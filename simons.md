@@ -65,22 +65,6 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 <!-- Content_START -->
 
-### 2024.08.31
-
-再次测试，获取邀请
-
-### 2024.09.01
-
-test
-
-### 2024.09.02
-
-test
-
-### 2024.09.03
-
-test
-
 ### 2024.09.07
 
 学习 Move-example，并翻译 16-example
