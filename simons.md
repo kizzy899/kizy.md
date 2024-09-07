@@ -81,4 +81,8 @@ test
 
 test
 
+### 2024.09.07
+
+学习 Move-example，并翻译 16-example
+
 <!-- Content_END -->
