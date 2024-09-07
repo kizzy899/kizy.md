@@ -18,5 +18,7 @@ timezone: Asia/Shanghai
 ### 2024.09.06
 了解Aptos残酷共学的规则，并报名。
 
+### 2024.09.07
+参与了aptos 101会议分享，了解了大致学习资料和内容
 
 <!-- Content_END -->
