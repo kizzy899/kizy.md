@@ -19,6 +19,16 @@ timezone: Asia/Shanghai
 笔记内容
 
 ### 2024.09.08
+#### aptos client 使用
+#### 1、创建账户 aptos init --profile <your-profile-name>
+```
+# 创建一个tz账户
+aptos init --profile tz 
+aptos 会在当前文件夹目录下创建一个.aptos隐藏文件夹，文件内容包括账户名称，公钥，私钥等信息
+```
+
+
+
 ### 2024.09.09
 ### 2024.09.10
 ### 2024.09.11
