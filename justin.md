@@ -21,4 +21,8 @@ timezone: Asia/Shanghai
 ### 2024.09.07
 参与了aptos 101会议分享，了解了大致学习资料和内容
 
+### 2024.09.08
+
+学习aptos文档 https://aptos.dev/en/network/blockchain
+
 <!-- Content_END -->
