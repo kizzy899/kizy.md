@@ -54,9 +54,10 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 # {你的名字}
 
 1. 自我介绍
+我叫kizy，是一名在校大学生。
 2. 你认为你会完成本次残酷学习吗？
+我会尽力学习的。
 
-## Notes
 
 <!-- Content_START -->
 

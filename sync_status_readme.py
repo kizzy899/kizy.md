@@ -184,9 +184,9 @@ def check_weekly_status(user_status, date, user_tz):
         missing_days = sum(1 for d in week_dates if user_status.get(datetime.combine(
             d.astimezone(pytz.UTC).date(), datetime.min.time()).replace(tzinfo=pytz.UTC), "⭕️") == "⭕️")
 
-        if local_date == current_date and missing_days > 2:
+        if local_date == current_date and missing_days > 3:
             return "❌"
-        elif local_date < current_date and missing_days > 2:
+        elif local_date < current_date and missing_days > 3:
             return "❌"
         elif local_date > current_date:
             return " "
@@ -198,8 +198,10 @@ def check_weekly_status(user_status, date, user_tz):
 
 
 def get_all_user_files():
+    exclude_prefixes = ('template', 'readme')
     return [f[:-len(FILE_SUFFIX)] for f in os.listdir('.')
-            if f.endswith(FILE_SUFFIX) and not f.startswith('Template')]
+            if f.lower().endswith(FILE_SUFFIX.lower()) 
+            and not f.lower().startswith(exclude_prefixes)]
 
 
 def update_readme(content):
@@ -281,7 +283,7 @@ def generate_user_row(user):
 
             if status == "⭕️":
                 absent_count += 1
-                if absent_count > 2:
+                if absent_count > 3:
                     is_eliminated = True
                     new_row += " ❌ |"
                 else:

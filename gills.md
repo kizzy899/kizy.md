@@ -1,5 +1,5 @@
 ---
-timezone: Asia/Shanghai
+timezone: Asia/Tokyo
 ---
 
 > 请在上边的 timezone 添加你的当地时区，这会有助于你的打卡状态的自动化更新，如果没有添加，默认为北京时间 UTC+8 时区
@@ -51,10 +51,10 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {你的名字}
+# Gills
 
-1. 自我介绍
-2. 你认为你会完成本次残酷学习吗？
+1. 我是一名web2传统的研究者。聚焦于AI和机器学习模型在音声（speech&sound）领域的应用。研究内容包括识别，合成，增强和DeepFake鉴别。曾经是一名Python开发者，因此对实际上手应用也略知一二。
+2. 我会尽力完成，但我认为这取决于个人能力和精力。目前我当然可以作出保证。
 
 ## Notes
 

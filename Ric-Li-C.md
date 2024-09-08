@@ -51,19 +51,24 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {你的名字}
+# Ric Li C
 
 1. 自我介绍
+
+Ric Li C, 家庭主夫，天天在家带 2 个女儿，自学了 Solidity，NextJS，TypeScript，前一段时间在 BSC 链上，发行了个人的半慈善性质的 NFT 项目：MAS Awareness (http://mas-awareness.top)。
+
 2. 你认为你会完成本次残酷学习吗？
+
+Yes 75%
 
 ## Notes
 
 <!-- Content_START -->
 
-### 2024.07.11
+### 2024.09.07
 
-笔记内容
+参加线上会议： Aptos & Move 简介与学习资料推荐
 
-### 2024.07.12
+### 2024.09.08
 
 <!-- Content_END -->

@@ -51,19 +51,34 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {你的名字}
+# {yue}
 
 1. 自我介绍
+  你好，我是一個萌新小白，我也是founder of diffusion ，希望可以讓我的項目更加高的完成度和提升對move語言的了解
 2. 你认为你会完成本次残酷学习吗？
-
+那是當然的
 ## Notes
 
 <!-- Content_START -->
 
-### 2024.07.11
+### 2024.09.07
 
-笔记内容
+- 学习主题： Aptos & Move 模組學習
+- 学习内容总结：
+move 到模組學習，從一開始配置aptos cli 和move 的ide環境
+```move
+module 0x42::HELLOWWORLD{
 
-### 2024.07.12
+    use std::debug::print;
+    use std::string::utf8;
+
+    #[test]
+    fun test_hello_eorld(){
+        print(&utf8(b"Hello World")); 
+    }
+}
+````
+一開始寫個hellow world 的move 來作為残酷学习的開始，這個可以print hellow world，然後就沒有了XD
+
 
 <!-- Content_END -->
