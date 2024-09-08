@@ -23,6 +23,7 @@ timezone: Asia/Shanghai
 
 ### 2024.09.08
 1.学习资料为APTOS LEARN Module 1，（https://learn.aptoslabs.com/zh/workshops/web2-to-aptos）
+
 -web2 和 web3 开发之间的主要区别在于数据处理：
 -阅读：区块链上的数据是公开的，不需要特殊的访问权限。
 -写入：每次写入都是一个区块链交易。您必须使用钱包来批准并签署交易。
