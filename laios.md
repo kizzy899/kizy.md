@@ -26,7 +26,7 @@ AptosBFT共识协议能够容忍最多三分之一的恶意验证节点。
 - 存储（Storage）：用于将达成共识的交易块及其执行结果持久化到本地数据库。
 - 状态同步器（State Synchronizer）：确保节点能够“追赶”区块链的最新状态并保持最新。
 
-<!-- Content_END -->
+
 
 
 
@@ -163,7 +163,7 @@ module 0x43::Lesson3{
 
 
 
-
+<!-- Content_END -->
 
 
 
