@@ -2,68 +2,28 @@
 timezone: Asia/Shanghai
 ---
 
-> 请在上边的 timezone 添加你的当地时区，这会有助于你的打卡状态的自动化更新，如果没有添加，默认为北京时间 UTC+8 时区
-> 时区请参考以下列表，请移除 # 以后的内容
+# Risker-C
 
-timezone: Pacific/Honolulu # 夏威夷-阿留申标准时间 (UTC-10)
+1. 自我介绍
+5年传统Web2开发者，熟练掌握CV大法，擅长在摸鱼中工作，喜欢接触新鲜事物，但是耐性不足，常年0天打鱼7天晒网选手
 
-timezone: America/Anchorage # 阿拉斯加标准时间 (UTC-9)
-
-timezone: America/Los_Angeles # 太平洋标准时间 (UTC-8)
-
-timezone: America/Denver # 山地标准时间 (UTC-7)
-
-timezone: America/Chicago # 中部标准时间 (UTC-6)
-
-timezone: America/New_York # 东部标准时间 (UTC-5)
-
-timezone: America/Halifax # 大西洋标准时间 (UTC-4)
-
-timezone: America/St_Johns # 纽芬兰标准时间 (UTC-3:30)
-
-timezone: America/Sao_Paulo # 巴西利亚时间 (UTC-3)
-
-timezone: Atlantic/Azores # 亚速尔群岛时间 (UTC-1)
-
-timezone: Europe/London # 格林威治标准时间 (UTC+0)
-
-timezone: Europe/Berlin # 中欧标准时间 (UTC+1)
-
-timezone: Europe/Helsinki # 东欧标准时间 (UTC+2)
-
-timezone: Europe/Moscow # 莫斯科标准时间 (UTC+3)
-
-timezone: Asia/Dubai # 海湾标准时间 (UTC+4)
-
-timezone: Asia/Kolkata # 印度标准时间 (UTC+5:30)
-
-timezone: Asia/Dhaka # 孟加拉国标准时间 (UTC+6)
-
-timezone: Asia/Bangkok # 中南半岛时间 (UTC+7)
-
-timezone: Asia/Shanghai # 中国标准时间 (UTC+8)
-
-timezone: Asia/Tokyo # 日本标准时间 (UTC+9)
-
-timezone: Australia/Sydney # 澳大利亚东部标准时间 (UTC+10)
-
-timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
-
----
-
-# {Risker-C}
-
-1. 5年传统Web2开发者，熟练掌握CV大法，擅长在摸鱼中工作，喜欢接触新鲜事物，但是耐性不足，常年0天打鱼7天晒网选手
-2. 希望能够坚持下来，获得令牌，未来大战江湖，留下高手的背影
+2. 你认为你会完成本次残酷学习吗？
+希望能够坚持下来，获得令牌，未来大战江湖，留下高手的背影
 
 ## Notes
 
 <!-- Content_START -->
 
-### 2024.07.11
+### 2024.09.07
 
-笔记内容
+1. 学习了残酷学习的学习、打卡方式和机制
+2. 了解了aptos的基础知识
+3. 确认开发工具idea以及插件Move on Aptos
+4. 获得了一些aptos学习有关的地址
+   1. 问题搜索地址：https://github.com/aptos-labs/aptos-developer-discussions/discussions
+   2. 交易查询地址：https://explorer.aptoslabs.com/?network=mainnet
+5. 学习了上链操作相关流程
 
-### 2024.07.12
+### 2024.09.08
 
 <!-- Content_END -->

@@ -61,10 +61,47 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 <!-- Content_START -->
 
-### 2024.07.11
+### 2024.09.07
 
-笔记内容
+- 学习主题： Aptos & Move 模組學習
+- 学习内容总结：
+move 到模組學習，從一開始配置aptos cli 和move 的ide環境
+```move
+module 0x42::HELLOWWORLD{
 
-### 2024.07.12
+    use std::debug::print;
+    use std::string::utf8;
+
+    #[test]
+    fun test_hello_eorld(){
+        print(&utf8(b"Hello World")); 
+    }
+}
+````
+一開始寫個hellow world 的move 來作為残酷学习的開始，這個可以print hellow world，然後就沒有了XD
+
+### 2024.09.08
+
+今天是學習如何在move裡面print出來，這樣才可以更好的去把bug和error解決
+
+```move
+module 0x42::lesson2{
+ use std::debug::print;
+
+  struct Wallet has drop{
+    balance:u64
+
+  }
+    #[test]
+    fun test_Wallet(){
+        let wallet  = Wallet {balance: 1000};
+        let wallet2 = wallet;
+        print (&wallet.balance);
+        //print (&wallet.balance);
+
+    }
+
+}
+```
 
 <!-- Content_END -->
