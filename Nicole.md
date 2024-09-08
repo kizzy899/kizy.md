@@ -21,8 +21,22 @@ timezone: Asia/Shanghai
 * 确认开发工具idea以及插件Move on Aptos
 * 明确了学习资料的地址
   问题搜索地址：https://github.com/aptos-labs/aptos-developer-discussions/discussions
+  
   交易查询地址：https://explorer.aptoslabs.com/?network=mainnet
 
 ### 2024.09.08
+1. 学习配置开发环境
+2. 
+### 2024.09.09
+
+### 2024.09.10
+
+### 2024.09.11
+
+### 2024.09.12
+
+### 2024.09.13
+
+### 2024.09.14
 
 <!-- Content_END -->
