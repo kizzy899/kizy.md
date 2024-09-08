@@ -51,22 +51,21 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {simons}
-
+# {你的名字}
+fantasy00lucky
 1. 自我介绍
-
-   simons，一个开发者
-
+  一名成都信息工程大学的区块链专业学生，具有一定的区块链知识储备。
 2. 你认为你会完成本次残酷学习吗？
-
-   可以
+   会！
 
 ## Notes
 
 <!-- Content_START -->
 
-### 2024.09.07
+### 2024.07.11
 
-学习 Move-example，并翻译 16-example
+笔记内容
+
+### 2024.07.12
 
 <!-- Content_END -->

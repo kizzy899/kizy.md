@@ -51,22 +51,19 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {simons}
+# Alvin
 
-1. 自我介绍
-
-   simons，一个开发者
-
-2. 你认为你会完成本次残酷学习吗？
-
-   可以
+1. 会一些 rust, 知道一些 move 和 solana, 会写一点 solidity.
+2. 你认为你会完成本次残酷学习吗？会的
 
 ## Notes
 
 <!-- Content_START -->
 
-### 2024.09.07
+### 2024.07.11
 
-学习 Move-example，并翻译 16-example
+笔记内容
+
+### 2024.07.12
 
 <!-- Content_END -->

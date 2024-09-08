@@ -64,7 +64,158 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2024.09.07
 
-笔记内容
+Aptos 区块链上的每个账户都由一个 32 字节的账户地址标识。
+与其他区块链中账户和地址隐式不同，Aptos 上的账户是显式的，需要先创建才能执行交易。
+可以通过将 Aptos 代币 (APT) 转移到 Aptos 来显式或隐式创建账户。
+
+Aptos 上有三种类型的账户：
+
+标准账户——这是一个典型的账户，对应一个地址和一对相应的公钥/私钥。
+资源账户- 一个没有对应私钥的自主账户，供开发者存储资源或上链发布模块。
+对象- 存储在代表单个实体的单个地址内的一组复杂资源。
+
+帐户地址为 32 字节。它们通常显示为 64 个十六进制字符，每个十六进制字符为一个半字节。有时地址以 0x 为前缀。
+Aptos区块链默认采用Ed25519签名交易。
+
+Aptos 区块链存储三种类型的数据：
+
+交易：交易表示区块链上的账户正在执行的预期操作（例如转移资产）。
+状态：（区块链账本）状态代表交易执行输出的累积，即存储在所有资源内的价值。
+事件：交易执​​行时发布的辅助数据。
+只有交易才能改变账本状态。
+
+<https://aptos.dev/en/build/get-started/developer-setup>
+
+Install the Aptos CLI on Mac
+
+```bash
+brew update
+brew install aptos
+
+aptos help
+
+brew update
+brew upgrade aptos
+
+intensive-colearning-aptos on  main via 🅒 base took 4.3s 
+➜ aptos --version              
+aptos 4.1.0
+
+
+Code/Aptos/hello_aptos via 🅒 base
+➜
+aptos init
+Configuring for profile default
+Choose network from [devnet, testnet, mainnet, local, custom | defaults to devnet]
+devnet
+Enter your private key as a hex literal (0x...) [Current: None | No input: Generate new key (or keep one if present)]
+
+No key given, generating key...
+Account 0xee6c038b66df7ed8aa91eb700938003ce29647f402c090ededd89b87a3c70e35 doesn't exist, creating it and funding it with 100000000 Octas
+Account 0xee6c038b66df7ed8aa91eb700938003ce29647f402c090ededd89b87a3c70e35 funded successfully
+
+---
+Aptos CLI is now set up for account 0xee6c038b66df7ed8aa91eb700938003ce29647f402c090ededd89b87a3c70e35 as profile default!
+ See the account here: https://explorer.aptoslabs.com/account/0xee6c038b66df7ed8aa91eb700938003ce29647f402c090ededd89b87a3c70e35?network=devnet
+ Run `aptos --help` for more information about commands
+{
+  "Result": "Success"
+}
+                                                                                                                                              
+
+Code/Aptos/hello_aptos via 🅒 base took 1m 32.7s
+➜
+aptos account list
+{
+  "Result": [
+    {
+      "0x1::account::Account": {
+        "authentication_key": "0xee6c038b66df7ed8aa91eb700938003ce29647f402c090ededd89b87a3c70e35",
+        "coin_register_events": {
+          "counter": "0",
+          "guid": {
+            "id": {
+              "addr": "0xee6c038b66df7ed8aa91eb700938003ce29647f402c090ededd89b87a3c70e35",
+              "creation_num": "0"
+            }
+          }
+        },
+        "guid_creation_num": "2",
+        "key_rotation_events": {
+          "counter": "0",
+          "guid": {
+            "id": {
+              "addr": "0xee6c038b66df7ed8aa91eb700938003ce29647f402c090ededd89b87a3c70e35",
+              "creation_num": "1"
+            }
+          }
+        },
+        "rotation_capability_offer": {
+          "for": {
+            "vec": []
+          }
+        },
+        "sequence_number": "0",
+        "signer_capability_offer": {
+          "for": {
+            "vec": []
+          }
+        }
+      }
+    }
+  ]
+}
+                                                                                                                                              
+
+Code/Aptos/hello_aptos via 🅒 base took 2.5s
+➜
+aptos account fund-with-faucet --account 0xee6c038b66df7ed8aa91eb700938003ce29647f402c090ededd89b87a3c70e35
+{
+  "Result": "Added 100000000 Octas to account 0xee6c038b66df7ed8aa91eb700938003ce29647f402c090ededd89b87a3c70e35"
+}
+                                                                                                                                              
+
+Code/Aptos/hello_aptos via 🅒 base took 2.8s
+➜
+touch StudyAptosNotes.md
+                                                                                                                                              
+
+Code/Aptos/hello_aptos via 🅒 base
+➜
+open -a Typora StudyAptosNotes.md
+                                                                                                                                              
+
+
+Code/Aptos/hello_aptos via 🅒 base
+➜
+ls
+StudyAptosNotes.md assets
+
+Code/Aptos/hello_aptos via 🅒 base
+➜
+ls -a
+.                  ..                 .aptos             StudyAptosNotes.md assets
+
+Code/Aptos/hello_aptos via 🅒 base
+➜
+cd .aptos/
+
+Aptos/hello_aptos/.aptos via 🅒 base
+➜
+ls
+config.yaml
+
+Aptos/hello_aptos/.aptos via 🅒 base
+➜
+c
+```
+
+<https://aptos.dev/en/build/cli/install-cli/install-cli-mac>
+<https://www.youtube.com/watch?v=_EFoVYcrbiY>
+<https://plugins.jetbrains.com/plugin/14721-move-on-aptos>
+<https://move-developers-dao.gitbook.io/aptos-move-by-example>
+<https://marketplace.visualstudio.com/items?itemName=movingco.move-analyzer-plus>
+<https://www.youtube.com/watch?v=87eeYsstBD4>
 
 ### 2024.09.08
 

@@ -1,5 +1,5 @@
 ---
-timezone: Asia/Shanghai
+timezone: Pacific/Auckland
 ---
 
 > 请在上边的 timezone 添加你的当地时区，这会有助于你的打卡状态的自动化更新，如果没有添加，默认为北京时间 UTC+8 时区
@@ -51,22 +51,20 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
-# {simons}
+# {你的名字}
 
 1. 自我介绍
-
-   simons，一个开发者
-
+bugmaker
 2. 你认为你会完成本次残酷学习吗？
-
-   可以
-
+是
 ## Notes
 
 <!-- Content_START -->
 
-### 2024.09.07
+### 2024.07.11
 
-学习 Move-example，并翻译 16-example
+笔记内容
+
+### 2024.07.12
 
 <!-- Content_END -->
