@@ -2,52 +2,6 @@
 timezone: Asia/Shanghai
 ---
 
-> 请在上边的 timezone 添加你的当地时区，这会有助于你的打卡状态的自动化更新，如果没有添加，默认为北京时间 UTC+8 时区
-> 时区请参考以下列表，请移除 # 以后的内容
-
-timezone: Pacific/Honolulu # 夏威夷-阿留申标准时间 (UTC-10)
-
-timezone: America/Anchorage # 阿拉斯加标准时间 (UTC-9)
-
-timezone: America/Los_Angeles # 太平洋标准时间 (UTC-8)
-
-timezone: America/Denver # 山地标准时间 (UTC-7)
-
-timezone: America/Chicago # 中部标准时间 (UTC-6)
-
-timezone: America/New_York # 东部标准时间 (UTC-5)
-
-timezone: America/Halifax # 大西洋标准时间 (UTC-4)
-
-timezone: America/St_Johns # 纽芬兰标准时间 (UTC-3:30)
-
-timezone: America/Sao_Paulo # 巴西利亚时间 (UTC-3)
-
-timezone: Atlantic/Azores # 亚速尔群岛时间 (UTC-1)
-
-timezone: Europe/London # 格林威治标准时间 (UTC+0)
-
-timezone: Europe/Berlin # 中欧标准时间 (UTC+1)
-
-timezone: Europe/Helsinki # 东欧标准时间 (UTC+2)
-
-timezone: Europe/Moscow # 莫斯科标准时间 (UTC+3)
-
-timezone: Asia/Dubai # 海湾标准时间 (UTC+4)
-
-timezone: Asia/Kolkata # 印度标准时间 (UTC+5:30)
-
-timezone: Asia/Dhaka # 孟加拉国标准时间 (UTC+6)
-
-timezone: Asia/Bangkok # 中南半岛时间 (UTC+7)
-
-timezone: Asia/Shanghai # 中国标准时间 (UTC+8)
-
-timezone: Asia/Tokyo # 日本标准时间 (UTC+9)
-
-timezone: Australia/Sydney # 澳大利亚东部标准时间 (UTC+10)
-
-timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ---
 
@@ -112,6 +66,188 @@ Aptos 在项目启动后，迅速得到了区块链领域的广泛关注。2022 
 不过我觉得目前节点的中心化程度有点高，这似乎是近期在各个公链的一些现象
 
 ### 2024.09.08
+
+- 我现在第一个要解决的就是，如何编程，如何编译
+Aptos 在编译 Move 合约和代码时，提供了一系列的命令行工具，特别是 Aptos CLI 和 Move CLI。以下是一些主要的编译相关指令：
+
+### 1. `aptos move compile`
+这是 Aptos CLI 用于编译 Move 合约的命令。
+
+- **基本用法**：
+  ```bash
+  aptos move compile --package-dir <package_path> --named-addresses <addresses>
+  ```
+
+- **选项**：
+  - `--package-dir <package_path>`：指定要编译的 Move 包的路径，默认路径为当前目录。
+  - `--named-addresses <addresses>`：为合约中使用的命名地址提供映射。例如：`Alice=0x1`.
+
+### 2. `aptos move test`
+用于运行 Move 代码的单元测试。
+
+- **基本用法**：
+  ```bash
+  aptos move test --package-dir <package_path> --named-addresses <addresses>
+  ```
+
+- **选项**：
+  - `--package-dir <package_path>`：指定包含测试的 Move 包路径。
+  - `--named-addresses <addresses>`：同样为命名地址指定映射。
+
+### 3. `move build`
+Move CLI 中的构建命令，用于编译 Move 包。
+
+- **基本用法**：
+  ```bash
+  move build
+  ```
+
+- **选项**：
+  - `--package-dir <path>`：指定 Move 包的路径。
+  - `--named-addresses <addresses>`：同样为命名地址指定映射。
+
+### 4. `move clean`
+清理之前的构建输出。
+
+- **基本用法**：
+  ```bash
+  move clean
+  ```
+
+### 5. `move check`
+Move CLI 用于检查代码是否符合 Move 的类型和语法要求，类似于静态分析。
+
+- **基本用法**：
+  ```bash
+  move check
+  ```
+
+### 6. `aptos move publish`
+发布 Move 合约到 Aptos 网络。
+
+- **基本用法**：
+  ```bash
+  aptos move publish --package-dir <package_path> --profile <profile_name>
+  ```
+
+
+
+Aptos 的 Move 项目的包结构一般遵循 Move 框架的标准项目结构。一个典型的 Move 项目包会包含多个文件夹和文件，用于存储 Move 代码、单元测试以及依赖管理等。以下是一个标准的 Move 项目的包结构：
+
+### 1. 项目根目录
+这是项目的根目录，包含整个 Move 包。文件和文件夹的命名方式和组织有助于管理和编译 Move 合约。
+
+```
+my_move_project/
+│
+├── Move.toml
+├── sources/
+├── tests/
+├── scripts/
+└── build/
+```
+
+### 2. `Move.toml`
+这是项目的配置文件，用于定义包的元数据、依赖关系、命名地址等信息。它类似于其他语言中的包管理配置文件，比如 Rust 的 `Cargo.toml`。
+
+**示例内容**：
+```toml
+[package]
+name = "MyMovePackage"
+version = "0.1.0"
+authors = ["Author Name"]
+
+[addresses]
+# 映射 Move 代码中的命名地址
+Alice = "0x1"
+Bob = "0x2"
+
+[dependencies]
+# 引入外部的 Move 包依赖
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework" }
+```
+
+### 3. `sources/`
+这个文件夹包含 Move 模块和脚本的源代码文件。Move 模块以 `.move` 结尾，通常是应用的核心业务逻辑。
+
+**示例结构**：
+```
+sources/
+│
+├── MyModule.move
+└── AnotherModule.move
+```
+
+**示例代码**（`MyModule.move`）：
+```move
+module MyModule {
+    public fun my_function() {
+        // function logic
+    }
+}
+```
+
+### 4. `tests/`
+`tests/` 文件夹包含 Move 的单元测试。测试文件可以是 Move 源文件或 `.move` 后缀的文件。
+
+**示例结构**：
+```
+tests/
+│
+└── my_test.move
+```
+
+**示例测试文件**（`my_test.move`）：
+```move
+script {
+    use 0x1::MyModule;
+
+    fun test_my_function() {
+        MyModule::my_function();
+    }
+}
+```
+
+### 5. `scripts/`
+`scripts/` 文件夹包含用于与链交互的 Move 脚本。Move 脚本是独立的逻辑片段，可以部署到链上执行。
+
+**示例结构**：
+```
+scripts/
+│
+└── deploy.move
+```
+
+**示例代码**（`deploy.move`）：
+```move
+script {
+    use 0x1::MyModule;
+
+    fun deploy() {
+        MyModule::init();
+    }
+}
+```
+
+### 6. `build/`
+`build/` 文件夹用于存放编译后的 Move 包和字节码文件。它通常不会手动编辑，且是在运行 `aptos move compile` 或 `move build` 后自动生成。
+
+### 7. 其他可能的文件夹
+- **`examples/`**：存放示例代码或参考实现。
+- **`storage/`**：一些项目会使用 `storage/` 来管理本地的链状态。
+
+
+
+感谢GPT，这个清晰了很多
+
+
+- 第二个问题：Aptos上的合约如何让用户觉得已经不可变更，是安全的
+	- 方法一，透过多签帐号去布署合约，这样如果要更新合约，也需要多签
+	- 方法二，不可变合约 (Immutable Contracts)，标示成不可升级
+	- Aptos特有的DAO投票升级
+	- 逻辑分离模式，将模组分离，让模组不可更改
+
+
 ### 2024.09.09
 ### 2024.09.10
 ### 2024.09.11
