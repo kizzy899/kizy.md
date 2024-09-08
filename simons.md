@@ -69,4 +69,8 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 学习 Move-example，并翻译 16-example
 
+### 2024.09.08
+
+手动配置 `aptos move prove` 依赖，并翻译 aptos-move/move-examples/18-hello-prover
+
 <!-- Content_END -->
