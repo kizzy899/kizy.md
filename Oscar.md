@@ -27,7 +27,7 @@ timezone: Asia/Shanghai
 
 - 学习主题： 第一次 Aptos 公开课回顾、共识机制了解
 - 学习内容总结：
-  -  在IntelliJ IDEA-中安装move on aptos 插件
+  -  在IntelliJ IDEA-中安装move on aptos 插件，参考[IDEA 配置 Aptos 开发](https://learnblockchain.cn/article/9258)
   - 讨论交流：https://github.com/aptos-labs/aptos-developer-discussions/discussions
   - **产品机制概览**
     - 语言系统：采用安全灵活的区块链语言——Move 语言；其专为在区块链上进行安全资源管理和可验证执行而设计。事务执行是确定性的、封闭的和计量的。确定性和封闭性意味着交易执行的输出完全可预测，并且仅基于交易中包含的信息和当前分类帐状态。
@@ -40,10 +40,31 @@ timezone: Asia/Shanghai
 
 ### 2024.09.09
 
-- 学习主题： 第一次 Aptos 公开课回顾
+- 学习主题： Aptos 账户
 - 学习内容总结：
 
+  - Aptos 区块链的设计强调账户的明确性和创建过程，确保用户在使用区块链之前必须先创建一个账户。这种方式与一些其他区块链（如以太坊）有所不同，后者允许隐式创建账户。在 Aptos 上，创建账户的过程可以通过转移 Aptos 代币（APT）来实现。具体而言，当用户将 APT 转移到一个新的账户地址时，该地址就会被创建并与相应的账户关联。这个过程确保了每个账户都是显式存在的，从而提高了安全性和可预测性。
+
+  - Aptos 上有三种类型的账户：
+
+    - 标准账户——这是一个典型的账户，对应一个地址和一对相应的公钥/私钥。
+    - 资源账户- 一个没有对应私钥的自主账户，供开发者存储资源或上链发布模块。
+    - 对象- 存储在代表单个实体的单个地址内的一组复杂资源。
+
+    Aptos 区块链存储三种类型的数据：
+
+    - 交易：交易表示区块链上的账户正在执行的预期操作（例如转移资产）。
+    - 状态：（区块链账本）状态代表交易执行输出的累积，即存储在所有资源内的价值。只有交易才能改变账本状态。
+    - 事件：交易执行时发布的辅助数据。
+
+  - TODO 阅读：[最近关于用户和 Move 智能合约交互，不需要授权(Approve) 是更安全还是更不安全的争论很多，这里尝试用通俗的方式来解释一下二者背后的区别以及 Move 这样设计背后的思想。](https://x.com/jolestar/status/1583034513122156544?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1583034513122156544%7Ctwgr%5Eaaeb5bb62de9074e8a1e2a7de3c89676d8c532b9%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fmirror.xyz%2F0xb54e978a34Af50228a3564662dB6005E9fB04f5a%2F_ZVhXxYTCyRM5_u2dO6KXLA9GWuWa6BiSp7vvNQ8XuU)
+
+
+
 ### 2024.09.10
+
+- 学习主题： 
+- 学习内容总结：
 
 ### 2024.09.11
 
