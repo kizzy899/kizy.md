@@ -249,6 +249,25 @@ script {
 
 
 ### 2024.09.09
+
+尝试create-aptos-dapp@latest
+
+目前提供四种版型：
+1. 单纯跟钱包交互的模型
+2. NFT铸造模型
+3. 代币铸造模型
+4. 代币质押模型
+
+我们选择铸币模型吧，应该比较简单些（自己想象的....）
+
+接下来选择是主网还是测试网（后续可以在config中改）
+其他先不变动，选择最简单的
+
+目前开发的流程的就是先透过create-aptos-dapp建立范本后，再用IDEA打开project
+
+公司网不好，今天先搞定本机的自行编译版本吧
+https://aptos.dev/en/build/cli/install-cli/install-cli-specific-version
+
 ### 2024.09.10
 ### 2024.09.11
 ### 2024.09.12
