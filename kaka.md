@@ -95,6 +95,52 @@ const committedTransaction = await aptos.transaction.submit.simple({
 const executedTransaction = await aptos.waitForTransaction({ transactionHash: committedTransaction.hash })
 ```
 
+### 2024.09.09
+**学习内容**：安装配置aptos CLI，创建一个项目，熟悉项目结构； <br>
+**学习记录**：<br>
+Aptos使用Move语言来开发智能合约。
 
+`aptos`命令：Aptos CLI（命令行接口）是一个工具用于帮助编译和测试Move合约。
+
+下载：https://aptos.dev/en/build/cli#-install-the-aptos-cli
+
+```
+aptos help // 命令行手册 （检查是否安装成功）
+```
+
+创建一个Move package :
+
+```
+aptos move init --name <PROJECT_NAME>
+```
+
+该命令生成了：`scripts\`、`sources\`、 `tests\` 和`Move.toml`
+
+目录是空的，Move.toml内容如下：
+
+```
+[package]
+name = "demo"
+version = "1.0.0"
+authors = []
+
+[addresses]
+hello_blockchain = "_"
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]
+```
+
+- `name`：package的名字；
+- `version`：package的版本；
+- `addresses`：描述模块将部署到哪个地址；
+- `dependencies`：可能需要使用AptosFramework和其他第三方依赖项；
+
+编写智能合约代码：增加到sources目录。
 
 <!-- Content_END -->
