@@ -20,7 +20,7 @@ timezone: Asia/Shanghai
 
 ### 2024.09.08
 
-笔记内容
+[开发第一个Aptos Move合约](https://bityoume.github.io/intensive-colearning-aptos/%E5%BC%80%E5%8F%91%E7%AC%AC%E4%B8%80%E4%B8%AAAptos_Move%E5%90%88%E7%BA%A6.html)
 
 ### 2024.09.09
 

@@ -22,4 +22,9 @@ timezone: Asia/Shanghai
 - 账户类型：Standard account 、Resource account、Object
 - GAS 费：max_gas_amount、gas_price
 
+### 2024.09.08
+
+在测试网部发布了第一个交易
+0x659e1887a3c9737df1dd66b7807fe60936b87ed0a256c4a99964634136489e61
+
 <!-- Content_END -->

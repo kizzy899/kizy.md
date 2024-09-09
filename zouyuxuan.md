@@ -19,6 +19,28 @@ timezone: Asia/Shanghai
 笔记内容
 
 ### 2024.09.08
+#### aptos client 使用
+#### 1、创建账户 aptos init --profile 
+```
+# 创建一个tz账户
+aptos init --profile tz 
+aptos 会在当前文件夹目录下创建一个.aptos隐藏文件夹，文件内容包括账户名称，公钥，私钥等信息
+
+# 领水 address 制定为自己的账户
+1、aptos account fund-with-faucet --profile tz 
+2、curl -X POST
+'https://faucet.devnet.aptoslabs.com/mint?amount=10000&address=0xd0f523c9e73e6f3d68c16ae883a9febc616e484c4998a72d8899a1009e5a89d6'
+
+# 查看tz账户余额，使用--url参数指定环境
+aptos account balance --account tz --url https://fullnode.devnet.aptoslabs.com
+
+# 使用tz账户给0x9002a65796acd991b7f0bca4bc7e6428821fa393ba95ba356cf7769435d12250 转账
+aptos account transfer --account 0x9002a65796acd991b7f0bca4bc7e6428821fa393ba95ba356cf7769435d12250 --amount 1000 --profile tz
+
+```
+
+
+
 ### 2024.09.09
 ### 2024.09.10
 ### 2024.09.11

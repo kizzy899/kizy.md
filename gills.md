@@ -63,6 +63,13 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 ### 2024.09.07
 加入了aptos move共学。明天开始搭建环境并且跑通实例。
 
+### 2024。09.08
+将Aptos公链机制的相关内容大致过了一遍，基本以区块链基本知识为主。但还需要详细阅读理论知识。
+
+安装成功了move，但是发现move语言包自带的rustc不是最新版本，因此会出现不兼容的情况。
+这里不能安装move里面的rust toolchain（如果有这个文件夹要删掉），需要单独安装rustup和rustc（具体可chatgpt）
+
+
 ### 2024.07.12
 
 <!-- Content_END -->

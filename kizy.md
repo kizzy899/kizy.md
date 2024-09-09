@@ -61,10 +61,33 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 <!-- Content_START -->
 
-### 2024.07.11
+### 2024.09.07
 
-笔记内容
+今日学习了解内容：
+1.较为推荐的开发环境：IDEA
+2.推荐的aptos钱包：https://petra.app/
+3.aptos讨论区：https://github.com/aptos-labs/aptos-developer-discussions/discussions
+4.APTOS定义与介绍//中文
+5. 更多的还是了解到aptos网站—— https://learn.aptoslabs.com/zh
 
-### 2024.07.12
+
+
+
+课后学习内容：
+一． 移动合约升级的常见方式介绍：
+1.	直接部署
+2.	直接覆盖
+3.	数据迁移
+4.	阶段升级——降低风险——考虑兼容性（主要是版本方面）
+
+未解决问题&待完成工作：
+1.	验证器和信标链是同个东西吗？
+2.	根据直播剪辑视频及群文档回归内容
+
+
+### 2024.09.08
+### 2024.09.09
+### 2024.09.10
+### 2024.09.11
 
 <!-- Content_END -->

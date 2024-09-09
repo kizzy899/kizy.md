@@ -219,7 +219,51 @@ c
 
 ### 2024.09.08
 
-笔记内容
+[idea 配置 aptos](https://docs.pontem.network/02.-move-language/intellij_ide_extension)
+
+创建项目
+
+```bash
+mkdir hello_optos
+cd hello_aptos
+```
+
+初始化项目
+
+```bash
+aptos move init --name hello_aptos
+```
+
+初始化账户
+
+```shell
+aptos init
+```
+
+编译
+
+```shell
+aptos move compile
+```
+
+测试
+
+```shell
+aptos move test
+```
+
+部署
+
+```shell
+aptos move publish --named-address hello_aptos
+➜ aptos move publish --named-addresses my_addrx=3b551727cac1bd5dc45023b869c9e37dd9e1830fc02ffe32f19597a668ba906d
+```
+
+运行
+
+```shell
+aptos move run --function-id 0x1::hello_aptos::greet --args "hello"
+```
 
 ### 2024.09.09
 
