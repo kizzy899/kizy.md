@@ -27,4 +27,9 @@ timezone: Asia/Shanghai
 在测试网部发布了第一个交易
 0x659e1887a3c9737df1dd66b7807fe60936b87ed0a256c4a99964634136489e61
 
+### 2024.09.09
+
+初始化了一个前端项目，进行合约调用
+(https://github.com/Gkok-king/hello_aptos)
+
 <!-- Content_END -->
