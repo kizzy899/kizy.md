@@ -27,4 +27,9 @@ timezone: Asia/Shanghai
 3. 编写基本的hello world 的demo
 4. 通过apt官方文档: https://aptos.dev/en/build/smart-contracts/book 了解apt开发的一些基础信息
 
+### 2024.09.09
+1. 成功将todo-list项目合约推送到测试网,对应tx地址: https://explorer.aptoslabs.com/txn/0xd9ac2b68f554ebb77dec900416f1eb555cb35f3148d273aa0666712e438f8279?network=testnet
+2. 继续学习研究move语法
+
+
 <!-- Content_END -->
