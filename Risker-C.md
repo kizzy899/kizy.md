@@ -45,7 +45,9 @@ timezone: Asia/Shanghai
 3. 后续进行React前端项目的开发，并实现与合约的交互功能
 
 ### 2024.09.09
-
+1. 按照官方文档创建了React Client项目
+2. 根据指引安装了 **@aptos-labs/wallet-adapter-react**, **@aptos-labs/wallet-adapter-ant-design**用于提供钱包连接能力和UI组件的依赖包
+3. 浏览器安装petra钱包，并在client项目中安装了**petra-plugin-wallet-adapter**钱包适配器依赖，并实现了钱包的连接
 
 ### 2024.09.10
 
