@@ -14,9 +14,21 @@ timezone: Asia/Shanghai
 
 <!-- Content_START -->
 
-### 2024.07.11
+### 2024.09.09
 
-笔记内容
+创建新的合约框架：
+```
+aptos move init --name <PROJECT_NAME>
+```
+其中合约框架里必须包含的有：sources/file_name.move 和 Move.toml
+
+接下来想研究的方向：
+1. composable NFT
+2. sponsored transaction
+3. fractionalized NFT
+4. Move 2.0 Language Release
+5. move prover
+6. Cryptography in Move
 
 ### 2024.07.12
 
