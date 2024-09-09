@@ -50,8 +50,11 @@ timezone: Asia/Shanghai
 3. 浏览器安装petra钱包，并在client项目中安装了**petra-plugin-wallet-adapter**钱包适配器依赖，并实现了钱包的连接
 
 ### 2024.09.10
-
-
+1. 在Client项目中，实现与部署在devnet上的合约进行交互，首先实现获取账户的todolist列表
+2. 实现为当前账户创建todolist的功能，实现调用合约方法，并成功使用钱包进行了支付操作，使用react成功做成了第一笔交易
+```
+0xc0910143714a05b5acf337081d3f073fe13803dca207061a46e8a94f10a7b72c
+```
 ### 2024.09.11
 
 
