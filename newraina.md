@@ -41,6 +41,25 @@ timezone: Asia/Tokyo
   - Ed25519 更快，更节省空间，更安全
   - Secp256k1 在比特币和以太坊中使用
 
+### 2024.09.09
+
+资源模型
+
+- key 能力的 Struct 被视为 Resource，可以存储在账户或者全局存储里
+- store 能力的 Struct 可以被存储在其他 Resource 里
+
+```move
+struct Coin has key {
+  value: u64
+}
+
+struct CoinStore has key {
+    coin: Coin,
+}
+
+CoinStore 是 Resource，Coin 是代币本身，可以存储在 CoinStore 里。
+
+```
 
 
 
