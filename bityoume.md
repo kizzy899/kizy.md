@@ -24,7 +24,7 @@ timezone: Asia/Shanghai
 
 ### 2024.09.09
 
-笔记内容
+[TypeScript SDK Quickstart](https://bityoume.github.io/intensive-colearning-aptos/ts_sdk_quickstart.html)
 
 ### 2024.09.10
 
