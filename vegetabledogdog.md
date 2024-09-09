@@ -25,4 +25,11 @@ The Aptos blockchain uses a Byzantine Fault Tolerance (BFT) consensus protocol f
 ### 2024.09.08
 安装aptos-cli，搭建开发环境。
 
+### 2024.09.09
+store和key关键字的区别
+
+store:allows values of types with this ability to exist inside a struct (resource) in global storage, but not necessarily as a top-level resource in global storage. If a value has store, all values contained inside of that value have store
+
+key:in order for a type to be used with move_to, borrow_global, move_from, etc., the type must have the key ability.If a value has key, all values contained inside of that value have store. This is the only ability with this sort of asymmetry.
+
 <!-- Content_END -->
