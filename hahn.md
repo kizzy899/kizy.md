@@ -16,12 +16,13 @@ timezone: Asia/Shanghai
 
 <!-- Content_START -->
 
-### 2024.08.30
+### 2024.09.09
 
 笔记内容
 
-开始新建
+查找资料安装配置apt运行环境
+了解move语言一些基础语法习惯
+编写基本的hello world 的demo
 
-### 2024.07.12
 
 <!-- Content_END -->
