@@ -25,6 +25,7 @@ timezone: Asia/Shanghai
   交易查询地址：https://explorer.aptoslabs.com/?network=mainnet
 
 ### 2024.09.08
+
 1. 学习配置开发环境
 2. 浏览Aptos白皮书
     Aptos 区块链设计原则：扩展性、安全性、可靠性和可升级性。
@@ -36,6 +37,10 @@ timezone: Asia/Shanghai
    
 ### 2024.09.09
 
+1. Aptos 节点是 Aptos 生态系统的一个实体，用于跟踪 Aptos 区块链的状态。客户端通过 Aptos 节点与区块链交互。有两种类型的节点：
+* Validator nodes 验证节点
+* Fullnodes 全节点
+##### 讨论区资料补充：https://github.com/aptos-labs/aptos-developer-discussions/discussions
 ### 2024.09.10
 
 ### 2024.09.11

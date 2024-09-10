@@ -267,11 +267,107 @@ aptos move run --function-id 0x1::hello_aptos::greet --args "hello"
 
 ### 2024.09.09
 
-笔记内容
+Move 语言与变量
+变量是什么？
+变量是存储数据值的容器，可以用来存储和操作数据。在 Move 语言中，变量可以用来存储整数、布尔值、字符串等数据类型。
+变量：是有名字的对象
+对象：存储某个类型值的内存区域
+值：按照类型进行解释的bytes集合
+类型：定义可能值的操作
+类型系统：定义类型和值之间的关系
+值类型是如何存储的？
+值类型，意为简单的类型，其主要特征是数量量较小，常见有以下类型：
+布尔类型
+整数
+浮点数
+枚举
+字符串
+堆类型值的指向
+...
+
+引用类型是如何存储的？
+引用类型，意为复杂类型，其主要特征是数量量较大，常见有以下类型：
+结构体
+数组
+向量
+函数
+模块
+对象
+类
+...
+
+Move 语言中的变量是如何存储的？
+Move 语言中的变量分为值类型变量和引用类型变量，它们的存储方式有所不同。
+值类型变量：直接存储在栈上，不需要额外的内存分配。
+引用类型变量：存储在堆上，需要通过引用来访问。
+
+值类型与引用类型的关系
+通常我们定义一个变量为对象时，其对象的值存储在堆上，其堆内存的索引存储在栈上，用栈上的索引指向堆上存储的引用类型数据。
+
+Move 的核心差异之一
+在值类型与引用类型关系上，不同于其他语言的索引方式。而是以“所有权”来作为引用类型的操作。
+
+1. 所有权只能同时由 1 “人” 拥有
+2. 所有权以转移的形式流转给其他变量
+
+这样做有什么好处？
+
+1. 避免内存泄露，不同于其他语言，在编译阶段就可以告知什么时候可以回收内存
+2. 提高内存使用效率，避免对引用类型的不必要拷贝
+3. 更好的可读性和可维护性
 
 ### 2024.09.10
 
-笔记内容
+UINT/ STRING/ BOOL 与 ADDRESS 四大类型
+
+```rust
+module 0x42::Types {
+    use std::debug::print;
+    use std::string;
+    use std::string::{String, utf8};
+
+    #[test]
+    fun test_num() {
+        let num_u8: u8 = 42; // 0~2**8-1
+        let num_u8_2 = 43u8;
+        let num_u8_3 = 0x2A; // hash
+
+        let num_u256: u256 = 100_000;
+
+        let num_sum = (num_u8 as u256) + num_u256;
+        print(&num_u8);
+        print(&num_u8_2);
+        print(&num_u8_3);
+        print(&num_u256);
+        print(&num_sum);
+    }
+
+    #[test]
+    fun test_bool() {
+        let bool_true: bool = true;
+        let bool_false: bool = false;
+        print(&bool_true);
+        print(&bool_false);
+        print(&(bool_true == bool_false));
+    }
+
+    #[test]
+    fun test_string() {
+        let str: String = utf8(b"Hello, Move!");
+        print(&str);
+    }
+
+    #[test]
+    fun test_addr() {
+        let addr: address = @0x42;
+        let addr_2: address = @0x00000000000000000000000000000000000000000A;
+
+        print(&addr);
+        print(&addr_2);
+    }
+}
+
+```
 
 ### 2024.09.11
 
