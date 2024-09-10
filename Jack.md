@@ -35,4 +35,16 @@ aptos的私钥可以更改，但是对应的地址不变。
 
 熟悉aptos的区块链浏览器的使用。
 
+### 2024.09.09
+
+1.使用aptos move init --name <PROJECT_NAME>创建一个aptos工程。
+工程内部在 Move.toml 文件中，填入以下关键信息：
+name: 包的名称
+version: 包的版本（默认值为 "0.0.0"）
+addresses: 描述模块将部署到的地址
+dependencies: 你可能会想使用 AptosFramework
+在sources文件内创建move并编写代码。
+
+2.使用aptos move compile进行编译。
+
 <!-- Content_END -->
