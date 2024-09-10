@@ -75,6 +75,10 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 
 ### 2024.09.09
 
-学习 move-example/[19~22]，并向 aptos-core 提交 PR: https://github.com/aptos-labs/aptos-core/pull/14564
+学习 move-example/[19~22]，并向 aptos-core 提 PR: https://github.com/aptos-labs/aptos-core/pull/14564
+
+### 2024.09.10
+
+学习 move-examples/[23~30]
 
 <!-- Content_END -->
