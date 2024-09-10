@@ -35,7 +35,7 @@ aptos的私钥可以更改，但是对应的地址不变。
 
 熟悉aptos的区块链浏览器的使用。
 
-### 2024.09.09
+### 2024.09.10
 
 1.使用aptos move init --name <PROJECT_NAME>创建一个aptos工程。
 
