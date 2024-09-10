@@ -61,6 +61,12 @@ CoinStore 是 Resource，Coin 是代币本身，可以存储在 CoinStore 里。
 
 ```
 
+### 2024.09.10
+
+尝试部署一个合约到 devnet：
+
+https://explorer.aptoslabs.com/txn/0x122e90a603d7dba158a5cc564c3858a96723d50d92b7aba22c63aae740db3602?network=devnet
+
 
 
 
