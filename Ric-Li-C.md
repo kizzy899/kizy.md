@@ -18,7 +18,7 @@ Yes 75%
 
 ### 2024.09.07
 
-参加线上会议： Aptos & Move 简介与学习资料推荐。
+参加线上会议 ~ Aptos 残酷共学分享 1：Aptos 101: 初识 Aptos；
 
 使用 Petra 钱包，测试使用 Testnet 网络（Devnet 会不定期重置，用于链代码测试），钱包内可以直接领测试币；
 
@@ -39,5 +39,9 @@ aptos move 的合约可以直接升级，类似 evm 可升级合约，可以增�
 安装 Aptos Move CLI；
 
 测试第一个 Move 合约 hello_move；
+
+### 2024.09.10
+
+参加线上会议 ~ Aptos 残酷共学分享 2：开发环境搭建与项目全流程。
 
 <!-- Content_END -->
