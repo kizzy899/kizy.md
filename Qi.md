@@ -32,4 +32,9 @@ timezone: Asia/Shanghai
 初始化了一个前端项目，进行合约调用
 (https://github.com/Gkok-king/hello_aptos)
 
+### 2024.09.10
+
+熟悉了 move 的相关语法
+https://github.com/Gkok-king/hello_aptos_back/blob/master/study/move.md
+
 <!-- Content_END -->
