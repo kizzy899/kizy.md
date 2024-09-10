@@ -30,6 +30,82 @@ aptos move init --name <PROJECT_NAME>
 5. move prover
 6. Cryptography in Move
 
-### 2024.07.12
+### 2024.09.10
+omposable NFT
+
+Basically the idea of an object owning another object. Simply store the child object inside the field of the parent object. It can be detached at any times but cannot be transfered alone while attached together.
+Example:
+```move
+    #[resource_group_member(group = aptos_framework::object::ObjectGroup)]
+    /// A face token, that can wear a hat and dynamically change
+    struct Face has key {
+        hat: Option<Object<Hat>>,
+    }
+
+    #[resource_group_member(group = aptos_framework::object::ObjectGroup)]
+    /// A hat with a description of what the hat is
+    struct Hat has key {
+        type: String
+    }
+```
+Face is the parent object and Hat is the child object, below code shows how to "wear" the Hat.
+```move
+/// Attaches a hat from the owner's inventory
+    ///
+    /// The hat must not be already owned by the face, and there should be no hat already worn.
+    entry fun add_hat(
+        caller: &signer,
+        face_object: Object<Face>,
+        hat_object: Object<Hat>
+    ) acquires Face, Hat, ObjectController, TokenController {
+        let caller_address = signer::address_of(caller);
+        assert!(caller_address == object::owner(face_object), E_NOT_OWNER);
+        assert!(caller_address == object::owner(hat_object), E_NOT_OWNER);
+
+        let face_address = object::object_address(&face_object);
+        let hat_address = object::object_address(&hat_object);
+
+        // Transfer hat to face
+        object::transfer(caller, hat_object, face_address);
+
+        // Attach hat to face
+        let face = borrow_global_mut<Face>(face_address);
+        assert!(option::is_none(&face.hat), E_HAT_ALREADY_ON);
+        option::fill(&mut face.hat, hat_object);
+
+        let hat = borrow_global<Hat>(hat_address);
+        let token_controller = borrow_global<TokenController>(face_address);
+
+        // Update the URI for the dynamic nFT
+        // TODO: Support more hats
+        if (hat.type == string::utf8(SAILOR_HAT)) {
+            token::set_uri(&token_controller.mutator_ref, string::utf8(FACE_WITH_SAILOR_HAT_URI))
+        } else {
+            abort E_UNSUPPORTED_HAT
+        };
+
+        // Updates the description to have the new hat
+        token::set_description(
+            &token_controller.mutator_ref,
+            string_utils::format2(&b"{} {}", string::utf8(FACE_WIF_HAT), hat.type)
+        );
+
+        // Disable transfer of hat (so it stays attached)
+        let hat_controller = borrow_global<ObjectController>(hat_address);
+        assert!(option::is_some(&hat_controller.transfer_ref), E_NO_TRANSFER_REF);
+        let hat_transfer_ref = option::borrow(&hat_controller.transfer_ref);
+        object::disable_ungated_transfer(hat_transfer_ref);
+    }
+```
+
+### 2024.09.11
+
+### 2024.09.12
+
+### 2024.09.13
+
+### 2024.09.14
+
+### 2024.09.15
 
 <!-- Content_END -->
