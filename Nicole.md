@@ -43,6 +43,8 @@ timezone: Asia/Shanghai
 ##### 讨论区资料补充：https://github.com/aptos-labs/aptos-developer-discussions/discussions
 ### 2024.09.10
 
+1. 交易从构建到链上执行需要经历5个步骤：构建、模拟、签名、提交、等待。
+2. 
 ### 2024.09.11
 
 ### 2024.09.12
