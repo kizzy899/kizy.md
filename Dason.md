@@ -31,5 +31,9 @@ timezone: Asia/Shanghai
 1. 成功将todo-list项目合约推送到测试网,对应tx地址: https://explorer.aptoslabs.com/txn/0xd9ac2b68f554ebb77dec900416f1eb555cb35f3148d273aa0666712e438f8279?network=testnet
 2. 继续学习研究move语法
 
+### 2024.09.10
+1. 继续学习move基础语法: 函数,数据类型,变量,关键字,引用,变量作用域关键周期等
+2. 参加会议,了解项目部署开发工具 开发要点等信息
+
 
 <!-- Content_END -->
