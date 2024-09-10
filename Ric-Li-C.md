@@ -18,7 +18,7 @@ Yes 75%
 
 ### 2024.09.07
 
-参加线上会议： Aptos & Move 简介与学习资料推荐。
+参加线上会议 ~ Aptos 残酷共学分享 1：Aptos 101: 初识 Aptos；
 
 使用 Petra 钱包，测试使用 Testnet 网络（Devnet 会不定期重置，用于链代码测试），钱包内可以直接领测试币；
 
@@ -39,5 +39,21 @@ aptos move 的合约可以直接升级，类似 evm 可升级合约，可以增�
 安装 Aptos Move CLI；
 
 测试第一个 Move 合约 hello_move；
+
+### 2024.09.10
+
+参加线上会议 ~ Aptos 残酷共学分享 2：开发环境搭建与项目全流程。
+
+下载并安装 IntelliJ IDEA （https://www.jetbrains.com/idea/download/download-thanks.html?platform=windows）
+
+也可使用 RustRover
+
+aptos account fund-with-faucet：领水
+
+aptos move test：测试合约
+
+    --filter MODULE_NAME::FUNCTION_NAME: 选择函数测试
+
+aptos move publish: 发布测试合约（https://explorer.aptoslabs.com/txn/0x237cc3d0b19c9f54c4680cb8ce0e1c9e77ef2085a4244a5483c685bc1150a401?network=testnet）
 
 <!-- Content_END -->

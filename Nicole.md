@@ -25,6 +25,7 @@ timezone: Asia/Shanghai
   交易查询地址：https://explorer.aptoslabs.com/?network=mainnet
 
 ### 2024.09.08
+
 1. 学习配置开发环境
 2. 浏览Aptos白皮书
     Aptos 区块链设计原则：扩展性、安全性、可靠性和可升级性。
@@ -36,7 +37,28 @@ timezone: Asia/Shanghai
    
 ### 2024.09.09
 
+1. Aptos 节点是 Aptos 生态系统的一个实体，用于跟踪 Aptos 区块链的状态。客户端通过 Aptos 节点与区块链交互。有两种类型的节点：
+* Validator nodes 验证节点
+* Fullnodes 全节点
+** 每个Aptos节点都包括几个逻辑组件
+  REST API service
+  Mempool
+  Execution
+  Virtual Machine
+  Storage
+  State synchronize 状态同步器
+##### 讨论区资料补充：https://github.com/aptos-labs/aptos-developer-discussions/discussions
+
 ### 2024.09.10
+
+1. 交易从构建到链上执行需要经历5个步骤：构建、模拟、签名、提交、等待。
+2. 节点网络和同步：验证器节点和全节点形成层次结构，验证器节点位于根，全节点位于其他位置。验证器全节点直接连接到验证器节点，并提供可扩展性和 DDoS 缓解功能。公共全节点连接到验证器全节点（或其他公共全节点）以获得对 Aptos 网络的低延迟访问。
+3. Move 是一种安全可靠的 Web3 编程语言，强调稀缺性和访问控制。 Move 中的任何资产都可以由 resources 表示或存储在resources中。默认情况下会强制实施稀缺性，因为结构不会被意外复制或删除。只有在字节码层明确定义为copy 的结构才可以分别被复制和drop 。
+4. 交易和状态：
+   * 交易：交易代表区块链上的账户执行的预期操作（例如，转移资产）。（只有交易才能改变账本状态）
+   * 状态：（区块链账本）状态代表交易执行输出的累积，即存储在所有资源中的值。
+   * 事件：执行交易时发布的辅助数据。
+
 
 ### 2024.09.11
 

@@ -49,7 +49,7 @@ Aptos采用了一种改进的BFT(拜占庭容错)共识机制,称为AptosBFT或D
    Aptos的协议将网络活性与安全性清晰分开,即使网络中断,只要BFT机制的诚实保证得到维护,就不需要分叉区块链.
 
 ### 2024.09.09
- -  [ ] 
+ -  [ ] 学习[Move Tutorial](https://github.com/aptos-labs/aptos-core/tree/main/aptos-move/move-examples/move-tutorial) 前三章
 ### 2024.09.10
  -  [ ] 
 ### 2024.09.11
