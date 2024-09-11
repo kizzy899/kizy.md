@@ -52,6 +52,7 @@ aptos move compile
 `注意事项：` 如果编译过程中may take a little while to download git dependencies...下载依赖报错
 替换 [dependencies.AptosFramework]中git地址为 "https://gitee.com/WGB5445/aptos-core.git"
 ### 2024.09.11
+#### 阅读aptos move example源码
 ### 2024.09.12
 ### 2024.09.13
 ### 2024.09.14
