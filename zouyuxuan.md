@@ -42,6 +42,15 @@ aptos account transfer --account 0x9002a65796acd991b7f0bca4bc7e6428821fa393ba95b
 ### 2024.09.09
 #### 熟悉move语言基本语法，编写基础智能合约
 ### 2024.09.10
+#### 创建move合约，编译部署
+```
+1、初始化一个名为game的智能合约项目文件
+aptos move init --name game
+2、编译智能合约
+aptos move compile
+```
+`注意事项：` 如果编译过程中may take a little while to download git dependencies...下载依赖报错
+替换 [dependencies.AptosFramework]中git地址为 "https://gitee.com/WGB5445/aptos-core.git"
 ### 2024.09.11
 ### 2024.09.12
 ### 2024.09.13

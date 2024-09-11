@@ -32,4 +32,14 @@ store:allows values of types with this ability to exist inside a struct (resourc
 
 key:in order for a type to be used with move_to, borrow_global, move_from, etc., the type must have the key ability.If a value has key, all values contained inside of that value have store. This is the only ability with this sort of asymmetry.
 
+### 2024.09.10
+convert object type:
+
+    object::convert<MyAwesomeStruct>(object)
+    object::address_to_object<MyAwesomeStruct>(object_address)
+
+unburn object:
+
+    object::unburn(owner, object);
+
 <!-- Content_END -->

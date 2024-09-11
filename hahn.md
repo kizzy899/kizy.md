@@ -24,5 +24,13 @@ timezone: Asia/Shanghai
 了解move语言一些基础语法习惯
 编写基本的hello world 的demo
 
+### 2024.09.10
+
+了解 Aptos
+节点类型：Validator nodes、Fullnodes
+共识协议：BFT
+账户类型：Standard account 、Resource account、Object
+GAS 费：max_gas_amount、gas_price
+
 
 <!-- Content_END -->
