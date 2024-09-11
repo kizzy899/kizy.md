@@ -28,7 +28,7 @@ timezone: Asia/Shanghai
 
 ### 2024.09.10
 
-笔记内容
+[Aptos DApp 开发入门](https://bityoume.github.io/intensive-colearning-aptos/hello_aptos_dapp.html)
 
 ### 2024.09.11
 

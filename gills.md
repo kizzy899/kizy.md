@@ -74,6 +74,9 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 ### 2024.09.09
 正在查看aptos.dev的[web3 101 课程](https://learn.aptoslabs.com/zh/tutorials/aptos-101/aptos-blockchain/account?workshop=web2-to-aptos)
 
+### 2024.09.10
+加入了当天的会议，查看了aptos项目的详细搭建步骤。
+
 ### 2024.07.12
 
 <!-- Content_END -->

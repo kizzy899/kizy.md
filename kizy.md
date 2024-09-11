@@ -84,10 +84,56 @@ timezone: Pacific/Auckland # 新西兰标准时间 (UTC+12)
 1.	验证器和信标链是同个东西吗？
 2.	根据直播剪辑视频及群文档回归内容
 
-
-### 2024.09.08
-### 2024.09.09
 ### 2024.09.10
+关于这几天环境配置小结
+下载安装aptos cli
+1.	下载aptoscli参考网站：https://aptos.dev/ （下载windows版本）
+2.	复制aptos.exe文件路径 配置到环境变量path中
+3.	在终端输入aptos help——有指令返回时，确认aptos能用
+ 
+4.	进入终端
+•  创建或进入你的 Move 项目目录：
+cd D:/aptosmove
+•  初始化项目（如果还未初始化）：
+复制代码
+aptos move init --package-name my_move_project
+
+这个操作会在根目录自动生成Move.toml和source文件夹
+5.	安装后 在idea下载配置aptos插件
+ 
+ 
+环境变量路径与刚刚配置的一致
+ 
+6.	随便写一小段 尝试运行
+script {
+use 0x1::Debug;
+
+fun main(){
+  let num:u64 = 1024;
+Debug ::print(&num);
+    }
+}
+7.	运行显示：
+Compiling, may take a little while to download git dependencies...
+FETCHING GIT DEPENDENCY https://github.com/aptos-labs/aptos-core.git
+
+最后出现error报错
+ 
+8.在终端尝试重新编译：
+aptos move compile
+报错仍然相同
+
+9.	在根目录找到Move.toml文件（我用的记事本编辑）
+编辑，把 move.toml 的地址改成 https://gitee.com/WGB5445/aptos-core.git
+
+[dependencies.AptosFramework]
+#git = "https://github.com/aptos-labs/aptos-core.git"#rev = "devnet"
+#subdir ="aptos-move/framework/aptos-framework"Local ="../aptos-core/aptos-move/framework/aptos-framework"
+
+
+ps:关于build 和 compile 的时候 --named-addresses 这个参数是不是必须的？
+A：带不带取决于 move.toml 写的是 “_” 还是 0x1234 这种地址，是地址就不用带
+
 ### 2024.09.11
 
 <!-- Content_END -->

@@ -28,6 +28,16 @@ timezone: Asia/Shanghai
 ### 2024.09.09
 设计结构体，编译模块，部署模块
 
+### 2024.09.10
+参加腾讯会议学习：从开发环境的搭建到项目的全流程开发
+
+### 2024.09.11
+windsow 安装 aptos以及更新命令
+aptos update aptos (自更新)
+创建工程：
+aptos move init --name cofirst
+理解 dependencies.AptosFramework
+测试函数#[test]实验
 
 
 <!-- Content_END -->

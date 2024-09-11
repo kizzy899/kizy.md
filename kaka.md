@@ -143,4 +143,28 @@ subdir = "aptos-move/framework/aptos-framework"
 
 编写智能合约代码：增加到sources目录。
 
+### 2024.09.10
+**学习内容**：编写合约，并编译、发布; <br>
+**学习记录**：<br>
+```
+aptos move compile  //编译合约，需要指明模块的部署地址，可以在命令行指明，也可以在move.toml中
+aptos move publish  //发布合约到个人账户
+aptos move deploy-object --address-name hello_blockchain //发布合约到Object
+```
+Move有两种类型的程序：**Modules**和**Scripts**。
+
+模块（Modules）是定义结构类型以及对这些类型进行操作的函数的库。结构类型定义了 Move 全局存储的模式，模块函数定义了更新存储的规则。模块本身也存储在全局存储中。
+
+模块有如下语法：
+
+```
+module <address>::<identifier> {
+    (<use> | <friend> | <type> | <function> | <constant>)*
+}
+```
+
+`module <address>::<identifier>`部分指定模块`<identifier>`将在全局存储中的账户地址`<address>`下发布。
+
+脚本（Scripts）是类似于传统语言中的主函数的可执行入口点。脚本通常调用已发布模块的函数来执行全局存储的更新。脚本是临时代码片段，未在全局存储中发布。
+
 <!-- Content_END -->
