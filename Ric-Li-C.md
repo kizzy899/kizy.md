@@ -44,4 +44,20 @@ aptos move 的合约可以直接升级，类似 evm 可升级合约，可以增�
 
 参加线上会议 ~ Aptos 残酷共学分享 2：开发环境搭建与项目全流程。
 
+下载并安装 IntelliJ IDEA Ultimate （https://www.jetbrains.com/idea/download/download-thanks.html?platform=windows）
+
+也可使用 IntelliJ IDEA Community Edition 或者 RustRover
+
+aptos account fund-with-faucet：领水
+
+aptos move test：测试合约
+
+    --filter MODULE_NAME::FUNCTION_NAME: 选择函数测试
+
+aptos move publish: 发布测试合约（https://explorer.aptoslabs.com/txn/0x237cc3d0b19c9f54c4680cb8ce0e1c9e77ef2085a4244a5483c685bc1150a401?network=testnet）
+
+### 2024.09.11
+
+IntelliJ IDEA Ultimate: Request for Open Source Development License
+
 <!-- Content_END -->

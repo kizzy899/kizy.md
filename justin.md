@@ -42,4 +42,20 @@ aptos 账户
 3. Object
 一系列资源存储在一个地址上
 
+### 2024.09.10
+Signer 里面有一个address
+module 0x1::signer {
+    struct signer has drop { a: address }
+}
+
+signer::address_of(&signer): address
+signer::borrow_address(&signer): &address
+
+Global Storage
+move_to<T>(&signer, T)
+move_from<T>(address): T
+borrow_global_mut<T>(address): &mut T
+borrow_global<T>(address): &T
+exists<T>(address): bool
+
 <!-- Content_END -->
