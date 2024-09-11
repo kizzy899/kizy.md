@@ -35,4 +35,9 @@ timezone: Asia/Shanghai
 
 [笔记](https://jeffierw.notion.site/Aptos-102-df0475d8a5e64dfaabd9bcd21950c019)
 
+### 2024.09.11
+* 学习了Aptos 合约的基本结构，引入依赖，结构体定义，init_module函数初始化，创建数字资产，编写getter和setter;
+
+[笔记](https://jeffierw.notion.site/Aptos-102-df0475d8a5e64dfaabd9bcd21950c019)
+
 <!-- Content_END -->
