@@ -87,10 +87,54 @@ timezone: Asia/Shanghai
     **资源：**允许不同的实例共享项目功能的代码，并且将修改、删除和发布指的规则编程为数据类型的模块中。因此在安全性和验证规则可组织其他代码或实体创建、修改、删除等操作。需具备可使数据实例符合顶级值并具有相应能力以及存储能力的数据类型。
     **账本：**由一个单一的账本状态来表示，随着采用程度的增加和技术发展，Aptos 将扩大碎片数量，增加吞吐量，支持跨碎片移动访问资产等行为；每个账本状态维护特定碎片的所有链上资产，并提供相同的账户模型和细粒度的数据存储来提供固定的存储访问成本。
 
-
 ### 2024.09.11
 
+- 学习主题： 公开课：安装开发环境、创建/编译/测试/部署工程 
+
+- 学习内容总结：[安装 Aptos CLI](https://aptos.web3doc.top/cli-tools/aptos-cli-tool/install-aptos-cli) 与 Aptos 网络交互
+
+  - 克隆 Aptos 存储库。
+
+    ```text
+    git clone https://github.com/aptos-labs/aptos-core.git
+    ```
+
+  - `cd` 进入 `aptos-core` 目录。
+
+    ```text
+    cd aptos-core
+    ```
+
+  - 运行 `scripts/dev_setup.sh` Bash 脚本，如下所示。 这将通过安装构建、测试和检查 Aptos Core 所需的大部分依赖项来准备您的开发人员环境。 请注意，系统可能会提示您输入密码：
+
+    ```text
+    ./scripts/dev_setup.sh
+    ```
+
+    可以通过运行 `./scripts/dev_setup.sh --help` 查看脚本的可用选项。
+
+  - 更新您当前的 shell 环境以运行 `cargo build` 和其他与 Aptos 相关的命令：
+
+    ```text
+    source ~/.cargo/env
+    ```
+
+  - （可选）签出发布分支以安装 Aptos 节点：
+
+    - 开发网
+    - 测试网
+
+    使用如下命令切换到 `testnet` 分支: 现在您的基本 Aptos 开发环境已准备就绪。
+
+    ```text
+    git checkout --track origin/testnet
+    ```
+
+  - [Jetbrains IDE 的Move语言插件](https://plugins.jetbrains.com/plugin/14721-move-language)：支持语法高亮、代码导航、重命名、格式化、类型检查和代码生成。
+
 ### 2024.09.12
+
+
 
 ### 2024.09.13
 
