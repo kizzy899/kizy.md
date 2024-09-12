@@ -36,7 +36,7 @@ timezone: Asia/Shanghai
 
 ### 2024.09.12
 
-笔记内容
+[TypeScript SDK 基本使用1](https://bityoume.github.io/intensive-colearning-aptos/ts_sdk_basic_usage.html)
 
 ### 2024.09.13
 
