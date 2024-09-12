@@ -136,4 +136,36 @@ A：带不带取决于 move.toml 写的是 “_” 还是 0x1234 这种地址，
 
 ### 2024.09.11
 
+配置环境：
+1.	rust环境
+https://www.rust-lang.org/
+2.	aptos move环境
+https://aptos.dev/tools/aptos-cli/use-cli/use-aptos-cli 
+3.	初始化move项目
+Aptos move init -- name lesson1
+ 
+4.	初始化账户
+Aptos init
+得到地址：0x528d636f35c74440ec5978aafaf2e40d49bb68abb32c5c3b93569bcaeb12e800
+
+认识项目结构
+	Move.toml //项目的配置，如项目名称，项目地址，第三方包
+	.aptos // 模块所指向的账户及项目配置信息（通过aptos init生成）
+——config.yaml
+	-scripts // 脚本文件，用来调用模块(用的少)-sources // 模块文件夹，模块和测试可以放在这里面
+	-tests // 测试文件，用来写测试用例(用的少)
+
+config.yaml：
+保存账户的私钥，公钥，账户，节点以及水龙头地址
+当账号创建好后，会自动在水龙头领取测试token
+
+
+Move.toml:
+Addresses:常规环境
+Dev-addresses:开发环境
+git 拉取的仓库
+rev 分支名
+subdir 相对路径
+
+
 <!-- Content_END -->
