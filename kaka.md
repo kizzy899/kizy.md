@@ -167,4 +167,66 @@ module <address>::<identifier> {
 
 脚本（Scripts）是类似于传统语言中的主函数的可执行入口点。脚本通常调用已发布模块的函数来执行全局存储的更新。脚本是临时代码片段，未在全局存储中发布。
 
+### 2024.09.11
+**学习内容**：学习Aptos中Object的概念 <br>
+**学习记录**：<br>
+在Move中，对象将资源组合在一起，以便将它们视为链上的单一实体。相比于账户，官方鼓励将代码部署到object上。因为它抽象了部署模块所需的必要资源，以及升级和冻结模块所需的授权。
+
+对象拥有自己的地址，并且可以拥有类似于账户的资源。
+
+示例：
+
+```
+module my_addr::object_playground {
+  use std::signer;
+  use std::string::{Self, String};
+  use aptos_framework::object::{Self, ObjectCore};
+  
+  struct MyStruct1 {
+    message: String,
+  }
+  
+  struct MyStruct2 {
+    message: String,
+  }
+ 
+  entry fun create_and_transfer(caller: &signer, destination: address) {
+    // Create object
+    let caller_address = signer::address_of(caller);
+    let constructor_ref = object::create_object(caller_address);
+    let object_signer = object::generate_signer(constructor_ref);
+    
+    // Set up the object by creating 2 resources in it
+    move_to(&object_signer, MyStruct1 {
+      message: string::utf8(b"hello")
+    });
+    move_to(&object_signer, MyStruct2 {
+      message: string::utf8(b"world")
+    });
+ 
+    // Transfer to destination
+    let object = object::object_from_constructor_ref<ObjectCore>(
+      &constructor_ref
+    );
+    object::transfer(caller, object, destination);
+  }
+}
+```
+
+> 在构建过程中，对象可以配置为可传输、可燃烧和可扩展。
+
+有三种类型的对象是可以创建的：
+
+- **normal Object**：该类型的对象可被删除，随机地址
+
+  `0x1::object::create_object(owner_address: address)`
+
+- **named Object**：不可删除、固定地址
+
+  `0x1::object::create_named_object(creator: &signer, seed: vector<u8>`
+
+- **sticky Object**：不可删除，随机地址
+
+  `0x1::object::create_sticky_object(owner_address: address)`
+
 <!-- Content_END -->

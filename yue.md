@@ -224,4 +224,135 @@ module 0x42::Type{
 
 }
 ```
+
+#### 2024.09.11
+```move
+module 0x42::Demo{
+    use std::debug;
+    use std::vector;
+
+    #[test]
+    fun test_push_back(){
+        let vec = vector[1,2,3];
+        vector::push_back(&mut vec ,4);
+        debug::print(&vec);
+
+    }
+
+    #[test]
+    fun test_append(){
+        let vec1= vector[1,2,3];
+        let vec2 = vector[4,5,6];
+        vector::append(&mut vec1,vec2);
+        debug::print(&vec1);
+
+    }
+
+    #[test]
+    fun test_rev(){
+        let ver1 =vector[1,2,3];
+        let ver2 = vector[4,5,6];
+        vector::reverse_append(&mut ver1,ver2);
+        debug::print(&ver1)
+
+    }
+    #[test]
+    fun test_pop_back(){
+        let vec =vector[1,2,3];
+        let x=vector::pop_back(&mut vec);
+        debug::print(&x);
+        debug::print(&vec);
+
+    }
+
+    #[test]
+
+    fun test_swap(){
+        let vec1 = vector[1,2,3,4,5];
+        vector::swap(&mut vec1,0,2);
+        debug::print(&vec1);
+    }
+    #[test]
+    fun test_reverse(){
+        let vec1 = vector[3,5,2,1,4];
+        vector::reverse(&mut vec1);
+        debug::print(&vec1);
+
+
+    }
+
+
+}
+```
+
+### 2024.09.12
+
+今天學struct的用法
+```move
+address 0x42{
+    module main{
+        use std::debug;
+        use std::signer;
+
+
+        struct Foo has drop{
+            u:u64,
+            b:bool
+        }
+        #[test]
+        fun oo(){
+            let f =Foo{u:42,b:true};
+            let Foo{u,b}=f;
+            debug::print(&u);
+            debug::print(&b);
+        }
+        #[test]
+
+        fun test2(){
+            let f=Foo{u:42,b:true};
+            let Foo{ u,b}=&mut f;
+            *u=43;
+            debug::print(&f.u);
+            debug::print(&f.b);
+
+        }
+
+        //copy
+
+        struct Cancopy has copy, drop{
+            u:u64,
+            b:u64
+        }
+        #[test]
+        fun test3(){
+            let f = Cancopy{u:1,b:8};
+            let f2 = copy f;
+            debug::print(&f2.u);
+            debug::print(&f2.b);
+            debug::print(&f.u);
+            debug::print(&f.b);
+
+        }
+
+        struct Key has key,drop{
+            s:Store
+
+        }
+        struct Store has store,drop{
+            s:u64,y:u64
+        }
+        #[test]
+        fun test4(){
+            let y=Store{s:1,y:2};
+            let k = Key{s:y};
+            debug::print(&k.s.s);
+            debug::print(&k.s.y);
+
+        }
+    }
+
+
+
+}
+```
 <!-- Content_END -->

@@ -67,7 +67,23 @@ CoinStore 是 Resource，Coin 是代币本身，可以存储在 CoinStore 里。
 
 https://explorer.aptoslabs.com/txn/0x122e90a603d7dba158a5cc564c3858a96723d50d92b7aba22c63aae740db3602?network=devnet
 
+### 2024.09.11
 
+学习 [Move Tutorial](https://github.com/aptos-labs/aptos-core/tree/main/aptos-move/move-examples/move-tutorial)
+
+Step 2 Exercises
+
+1. Find a flag that you can pass to the aptos move test command that will dump the global state when the test fails
+
+```bash
+aptos move test --dump
+```
+
+2. Find a flag that allows you to gather test coverage information
+
+```bash
+aptos move test --coverage
+```
 
 
 <!-- Content_END -->

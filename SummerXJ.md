@@ -39,5 +39,7 @@ aptos move init --name cofirst
 理解 dependencies.AptosFramework
 测试函数#[test]实验
 
+### 2024.09.12
+调研结构体、玩家账号体系、设计整体思路。
 
 <!-- Content_END -->
