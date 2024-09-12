@@ -25,7 +25,7 @@ aptos move init --name <PROJECT_NAME>
 1. composable NFT ---> done
 2. sponsored transaction
 3. fractionalized NFT
-4. Move 2.0 Language Release
+4. Move 2.0 Language Release ---> done
 5. move prover
 6. Cryptography in Move
 
@@ -111,7 +111,29 @@ module 0x42::example {
   struct Monkey has store, key { }
 }
 ```
+
 ### 2024.09.12
+Fractionalized NFT
+--> done by fractionalize Digital Asset
+- a single item is split into fractional ownership, a percentage of the full item.
+- ExtendRef for allowing someone to defractionalize the asset only if they have 100% of it
+- `primary_fungible_store::create_primary_store_enabled_fungible_asset` to attach the metadata
+- `primary_fungible_store::mint` to mint the supply of FA
+
+```move
+    #[resource_group_member(group = aptos_framework::object::ObjectGroup)]
+    /// A locker for a digital asset and fractionalizes it accordingly
+    struct FractionalDigitalAsset has key {
+        /// The address of the locked up token
+        asset: Object<TokenObject>,
+        /// For transferring the locked up token back out
+        extend_ref: ExtendRef,
+        /// For burning the tokens at the end
+        burn_ref: BurnRef,
+        /// For locking/unlocking the token from the object containing the token
+        transfer_ref: TransferRef,
+    }
+```
 
 ### 2024.09.13
 
