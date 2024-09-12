@@ -72,7 +72,9 @@ timezone: Asia/Shanghai
    - Voter
 4. Aptos 主网纪元设置为 7200 秒（两小时）。
 5. 奖励公式
-$$ Reward = staked_amount * rewards_rate per epoch * (Number of successful proposals by the validator / Total number of proposals made by the validator) $$
+$$
+Reward = staked_amount * rewards_rate per epoch * (Number of successful proposals by the validator / Total number of proposals made by the validator)
+$$
 ### 2024.09.13
 
 ### 2024.09.14
