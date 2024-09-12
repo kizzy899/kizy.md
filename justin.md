@@ -97,4 +97,28 @@ module my_addr::object_playground {
   }
 }
 
+### 2024.09.12
+创建object
+有三种类型
+1. normal Object 
+可删除、随机地址
+let caller_address = signer::address_of(caller);
+let constructor_ref = object::create_object(caller_address);
+
+2. named Object
+自定义名字的object
+不可删除、固定地址
+const NAME: vector<u8> = b"MyAwesomeObject";
+
+entry fun create_my_object(caller: &signer) {
+    let caller_address = signer::address_of(caller);
+    let constructor_ref = object::create_named_object(caller, NAME);
+    // ...
+}
+
+3. sticky Object
+不可删除、随机地址
+let caller_address = signer::address_of(caller);
+let constructor_ref = object::create_sticky_object(caller_address);
+
 <!-- Content_END -->
