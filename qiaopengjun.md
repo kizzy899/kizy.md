@@ -559,7 +559,140 @@ fun test6() {
 
 ### 2024.09.13
 
-笔记内容
+函数操作流IF、WHILE、LOOP
+
+```rust
+module 0x42::Demo3 {
+    use std::debug;
+
+    #[test]
+    fun test_if() {
+        let x = 5;
+        let x2 = 10;
+        if (x == 5) {
+            debug::print(&x);
+        } else {
+            debug::print(&x2);
+        }
+    }
+
+    #[test]
+    fun test_while() {
+        let  x = 0;
+        while (x < 10) {
+            debug::print(&x);
+            x = x + 1;
+        }
+    }
+
+    #[test]
+    fun test_while2() {
+        let  x = 5;
+        while (x < 10) {
+            debug::print(&x);
+            x = x + 1;
+
+            if (x == 7) {
+                break;
+            }
+        }
+    }
+
+    #[test]
+    fun test_while3() {
+        let  x = 5;
+        while (x < 10) {
+            x = x + 1;
+            if (x == 7) {
+                continue;
+            };
+            debug::print(&x);
+        }
+    }
+
+    #[test]
+    fun test_loop() {
+        let x = 5;
+        loop {
+            x = x + 1;
+            if (x == 7) {
+                break;
+            };
+            debug::print(&x);
+        }
+    }
+
+    #[test]
+    fun test_loop2() {
+        let x = 5;
+        loop {
+            x = x + 1;
+            if (x == 7) {
+                continue;
+            };
+            if (x == 10) {
+                break;
+            };
+            debug::print(&x);
+        }
+    }
+}
+```
+
+模块的特性
+引用
+可以通过以下三种方式导入模块，用来更好的进行管理。注意命名不能重复。
+
+```rust
+use std::debut;
+use std::debug::print;
+use std::debug::{print as P, native_print, print};
+
+fun main() {
+  debug::print(&v);
+  print(&v);
+  P(&v);
+}
+```
+
+作用域
+可以在全局定义，也可以定义在函数内部，只在所在的作用域内有效。
+
+```rust
+fun main() {
+  use std::debug::print;
+  print(&v);
+}
+
+public(friend) 
+声明当前模块信任用模块，受信任模块可以调用当前模块中具有 public(friend) 的可见性函数
+
+public
+声明当前模块对外供其他接口调用的方法。
+
+entry
+声明可被链下调用的模块方法。
+
+模块的发布与交互
+发布流程
+1. 配置账户，并为其发送 gas
+  可以通过 aptos init 来初始化一个账户。
+2. 编译并测试模块
+  可以通过以下命令来编译
+  aptos move compile --named-addresses hello_blockchain=default
+3. 发布模块
+  aptos move publish --named-addresses hello_blockchain=default
+
+交互流程
+1. 区块链浏览器
+  https://explorer.aptoslabs.com/
+2. 终端
+  aptos move run --function-id 'default::message::set_message' --args 'string:hello, blockchain'
+
+3. SDK
+  https://aptos.dev/en/build/sdks
+ 
+
 
 ### 2024.09.14
 
