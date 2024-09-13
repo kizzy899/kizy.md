@@ -60,4 +60,10 @@ aptos move publish: 发布测试合约（https://explorer.aptoslabs.com/txn/0x23
 
 IntelliJ IDEA Ultimate: Request for Open Source Development License
 
+### 2024.09.13
+
+IntelliJ IDEA Ultimate: Request for Open Source Development License has been declined;
+
+Write one more email to request license as last try;
+
 <!-- Content_END -->
