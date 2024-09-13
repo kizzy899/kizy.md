@@ -290,6 +290,19 @@ https://explorer.aptoslabs.com/txn/5966782531/changes?network=testnet
 休息
 ### 2024.09.12
 
+找一下线上编辑器，听说movebit有出品 https://ide.bitslab.xyz/
+可惜目前只支援Sui
+
+https://github.com/caoyang2002/movelgo 群友的作品
+安装后可以获得一个Web IDE，所以远端可以安装编译器
+目前是半成品，为了节省时间，以后有空再测试
+
+于是今天不写程式，找找相关的方案
+
+https://playground.pontem.network/
+
+好吧，目前只找到这个，但是挺好用的（只有合约的部分的话）
+
 
 ### 2024.09.13
 ### 2024.09.14

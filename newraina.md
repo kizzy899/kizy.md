@@ -85,5 +85,16 @@ aptos move test --dump
 aptos move test --coverage
 ```
 
+### 2024.09.12
+
+学习 Move Tutorial step 3 & 4
+
+- friend 语法
+  - script 不能调用 friend 函数
+-　数据存储模型
+  - 每一个地址下，一个类型只能有一个值，因为它的存储模型是 type 到 value 的 Map
+
+
+
 
 <!-- Content_END -->

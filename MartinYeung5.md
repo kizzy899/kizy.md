@@ -239,4 +239,16 @@ Authenticator在執行交易的簽名過程中，會給Aptos區塊鏈櫂限來�
 來生成一個有效的交易簽名。在這一步會產生一個RawTransaction的簽名，但仍未進行交易的。
 3. 之後會經過Authenticator進行下一步動作，Authenticator會獲取用戶的public key和較早前獲到的RawTransaction的簽名。
 4. 當Authenticator成功收集到兩項資料就會讓Aptos進行最後的交易簽名的動作。
+
+### 2024.09.12
+
+
+建立一個已簽名的文易
+1. Raw Transaction
+首先 raw transaction是由以下幾個部分組成的:
+* 發送者的地址(Address)
+* 一組序號(unit64): 這組數字是針對當下的交易，而它也是必須與儲存在發送者戶口中的序號相符。
+* Payload：Aptos區塊鏈的指令，包括發佈模組、執行腳本函數或執行腳本有效負載。
+* max_gas_amount (uint64): 此交易花費的最大總gas fee。帳戶必須擁有大過此gas fee的通證，
+否則交易將在驗證過程中被丟棄。
 <!-- Content_END -->

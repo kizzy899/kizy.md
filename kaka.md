@@ -229,4 +229,18 @@ module my_addr::object_playground {
 
   `0x1::object::create_sticky_object(owner_address: address)`
 
+### 2024.09.12
+**学习内容**：学习Aptos中struct和abilities的概念 <br>
+**学习记录**：<br>
+在Move中，Abilities是一项可以给**类型**注入某种**能力**。类型可以注入多个能力。
+
+有4种不同的能力：
+
+- `copy`：可以被复制；
+- `drop`：可以被弹出/丢弃 popped/dropped;
+- `store`：允许该类型的值存储在全局变量的struct中
+- `key`：允许类型作为全局存储操作的键（key）
+
+https://aptos.dev/en/build/smart-contracts/book/abilities
+
 <!-- Content_END -->

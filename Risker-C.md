@@ -60,6 +60,7 @@ timezone: Asia/Shanghai
 2. 将本次的项目代码发布到仓库: <https://github.com/Risker-C/my-first-dapp>
 ### 2024.09.12
 
+1. 今日通宵加班，请假
 
 ### 2024.09.13
 
