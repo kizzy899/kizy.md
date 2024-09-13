@@ -54,6 +54,7 @@ dependencies: 你可能会想使用 AptosFramework
 2.使用aptos move compile进行编译。
 
 ### 2024.09.13
+
 Aptos测试
 1.#[test]（预期执行成功）和注释都#[expected_failure]（预期失败）可以带参数或不带参数使用。
 
