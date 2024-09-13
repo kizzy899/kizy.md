@@ -371,11 +371,191 @@ module 0x42::Types {
 
 ### 2024.09.11
 
-笔记内容
+APTOS-MOVE
+VECTOR 向量核心特性 1
+基础概念
+Vector（向量）类似其它语言中的数组， 内部存储的是同一类型的数据。
+
+| 语法              | 描述                 |
+| ----------------- | -------------------- |
+| vector[]          | 空数组               |
+| vector[e1,...,en] | 具有同类型元素的数组 |
+
+增删改查功能
+
+<https://aptos.dev/en/build/smart-contracts/book/vector>
+
+函数修饰符
+核心概念
+函数修饰符是用来赋予函数特殊能力的一组关键字。主要有以下几类
+
+- 可见性
+  - 无Public，私有函数，仅限 module 内部调用
+  - friend public，模块内部函数，同包模块之间可以调用
+  - Public，模块公开函数，所有模块都可以调用
+- 全局存储引用
+  - acquires，当需要使用 move_from，borrow_global，borrow_global_mut 访问地址下的资源的时候，需要使用 acquires 修饰符
+- 链下
+  - entry，修饰后，该方法可由链下脚本调用
 
 ### 2024.09.12
 
-笔记内容
+APTOS-MOVE
+STRUCT 特性解读
+核心概念
+Aptos Move 的 Struct 结构体用于存储结构化数据。Struct 可以相互嵌套，并可以作为资源存储在特定地址下。”
+
+1. 命名必须以大写字母开头
+2. 可以通过 has 关键字赋予能力
+
+```rust
+struct Person {
+  ape: u8,
+  birthday: u32,
+}
+
+struct People {
+  people: vector<Person>,
+}
+```
+
+修饰符
+Copy - 值能够被复制
+Drop - 值可以在作用域结束时被自动清理
+Key - 值可以用作于全局存储的键 Key
+Store - 值可以存储在全局存储中
+
+除 Struct 类型外，其他的类型默认具备 store、drop、copy 的能力，Struct 最终是存储在用户的地址上（或者被销毁），不存在 Aptos 合约里，Aptos 合约是一个全纯的函数。
+
+Drop
+值能够在使用结束后被销毁
+
+```rust
+//drop
+struct Coin {
+  b: bool
+}
+
+#[test]
+fun test6() {
+  let c = Coin { b: true }; // 会报错
+}
+
+//drop
+struct Coin has drop {
+  b: bool,
+}
+
+#[test]
+fun test6() {
+  let c = Coin { b: true };
+}
+
+```
+
+copy
+值能够在使用结束后被复制
+
+```rust
+//copy
+struct CanCopy has drop {
+  b: bool,
+}
+
+#[test]
+fun test5() {
+  let c = CanCopy { b: true };
+  let c1 = c; // no copy
+  let CanCopy { b } = &mut c1;
+  *b = false;
+  debug::print(&c1.b);
+}
+```
+
+```rust
+// copy
+struct CanCopy has copy, drop {
+  b: bool,
+}
+
+#[test]
+fun test5() {
+  let c = CanCopy { b: true };
+  let c1 = c; // copy
+  let CanCopy { b } = &mut c1;
+  *b = false;
+  debug::print(&c1.b);
+  debug::print(&c.b);
+}
+```
+
+Key
+值可以用作于全局存储的键 Key
+
+```rust
+//key
+struct Coin has key {
+  value: u64,
+}
+
+public entry fun mint(account: &signer, value: u64) {
+  move_to(account, Coin { value });
+}
+
+#[test(account = @0x42)]
+public fun test_mint(account: &signer) acquires Coin {
+  let addr = signer::address_of(account);
+  mint(account, 100);
+  let coin = borrow_global<Coin>(addr).value;
+  debug::print(&coin);
+}
+```
+
+store
+值可以被全局存储，通常配合Key使用
+
+```rust
+//store
+struct Key has key, drop {
+  a: Store,
+}
+
+struct Store has store, drop {
+  b: bool,
+}
+
+#[test]
+fun test6() {
+  let k = Key {
+    a: Store { b: true },
+  };
+  debug::print(&k.a.b);
+}
+```
+
+父 的有 Key 子的必须有 stare
+
+```rust
+//store
+struct Key has key, drop {
+  a: Store,
+}
+
+struct Store has drop {
+  b: bool,
+}
+
+#[test]
+fun test6() {
+  let k = Key {
+    a: Store { b: true },
+  };
+  debug::print(&k.a.b); // 会报错
+}
+```
+
+<https://aptos.dev/en/build/smart-contracts/book/structs-and-resources>
+<https://aptos.dev/en/build/smart-contracts/book/abilities>
 
 ### 2024.09.13
 

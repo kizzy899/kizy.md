@@ -15,7 +15,6 @@ timezone: Asia/Shanghai
 <!-- Content_START -->
 
 ### 2024.09.09
-
 创建新的合约框架：
 ```
 aptos move init --name <PROJECT_NAME>
@@ -23,15 +22,15 @@ aptos move init --name <PROJECT_NAME>
 其中合约框架里必须包含的有：sources/file_name.move 和 Move.toml
 
 接下来想研究的方向：
-1. composable NFT
+1. composable NFT ---> done
 2. sponsored transaction
 3. fractionalized NFT
-4. Move 2.0 Language Release
+4. Move 2.0 Language Release ---> done
 5. move prover
 6. Cryptography in Move
 
 ### 2024.09.10
-omposable NFT
+Composable NFT
 
 Basically the idea of an object owning another object. Simply store the child object inside the field of the parent object. It can be detached at any times but cannot be transfered alone while attached together.
 Example:
@@ -99,8 +98,42 @@ Face is the parent object and Hat is the child object, below code shows how to "
 ```
 
 ### 2024.09.11
+Lots of updates in Move 2.0 to catch up on. 
+https://aptos.dev/en/build/smart-contracts/book/move-2.0
+
+somehow resource objects require these tags now?:
+```move
+module 0x42::example {
+  #[resource_group(scope = global)]
+  struct ObjectGroup { }
+ 
+  #[resource_group_member(group = 0x42::example::ObjectGroup)]
+  struct Monkey has store, key { }
+}
+```
 
 ### 2024.09.12
+Fractionalized NFT
+--> done by fractionalize Digital Asset
+- a single item is split into fractional ownership, a percentage of the full item.
+- ExtendRef for allowing someone to defractionalize the asset only if they have 100% of it
+- `primary_fungible_store::create_primary_store_enabled_fungible_asset` to attach the metadata
+- `primary_fungible_store::mint` to mint the supply of FA
+
+```move
+    #[resource_group_member(group = aptos_framework::object::ObjectGroup)]
+    /// A locker for a digital asset and fractionalizes it accordingly
+    struct FractionalDigitalAsset has key {
+        /// The address of the locked up token
+        asset: Object<TokenObject>,
+        /// For transferring the locked up token back out
+        extend_ref: ExtendRef,
+        /// For burning the tokens at the end
+        burn_ref: BurnRef,
+        /// For locking/unlocking the token from the object containing the token
+        transfer_ref: TransferRef,
+    }
+```
 
 ### 2024.09.13
 

@@ -37,4 +37,14 @@ timezone: Asia/Shanghai
 熟悉了 move 的相关语法
 https://github.com/Gkok-king/hello_aptos_back/blob/master/study/move.md
 
+### 2024.09.11
+
+新学了一点基础语法
+https://github.com/Gkok-king/hello_aptos_back/blob/master/study/move.md
+
+### 2024.09.12
+
+又新学了一点基础语法：函数和范型
+https://github.com/Gkok-king/hello_aptos_back/blob/master/study/move.md
+
 <!-- Content_END -->

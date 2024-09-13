@@ -32,11 +32,11 @@ timezone: Asia/Shanghai
 
 ### 2024.09.11
 
-笔记内容
+[官方 Todolist 前端交互体验](https://bityoume.github.io/intensive-colearning-aptos/todolist_frontend.html)
 
 ### 2024.09.12
 
-笔记内容
+[TypeScript SDK 基本使用1](https://bityoume.github.io/intensive-colearning-aptos/ts_sdk_basic_usage.html)
 
 ### 2024.09.13
 

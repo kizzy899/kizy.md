@@ -269,8 +269,41 @@ script {
 https://aptos.dev/en/build/cli/install-cli/install-cli-specific-version
 
 ### 2024.09.10
+
+缺课
 ### 2024.09.11
+
+尝试编译发布
+RR 很不错，会提示用户下一步可以做些什么，而且蛮符合需求的
+先尝试Init，发现他找不到cli
+找一下用python安装的aptos cli 在home 的 .local/bin下
+但是现在有一个很奇怪的地方就是，RR每次都会说没有CLI，然后又重新帮我安装一次
+
+完成了第一次布署合约
+https://explorer.aptoslabs.com/txn/5966782531/changes?network=testnet
+
+测试可以领取
+
+完成代币铸造
+
+累了
+休息
 ### 2024.09.12
+
+找一下线上编辑器，听说movebit有出品 https://ide.bitslab.xyz/
+可惜目前只支援Sui
+
+https://github.com/caoyang2002/movelgo 群友的作品
+安装后可以获得一个Web IDE，所以远端可以安装编译器
+目前是半成品，为了节省时间，以后有空再测试
+
+于是今天不写程式，找找相关的方案
+
+https://playground.pontem.network/
+
+好吧，目前只找到这个，但是挺好用的（只有合约的部分的话）
+
+
 ### 2024.09.13
 ### 2024.09.14
 ### 2024.09.15

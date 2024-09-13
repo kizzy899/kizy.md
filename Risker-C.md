@@ -56,10 +56,11 @@ timezone: Asia/Shanghai
 0xc0910143714a05b5acf337081d3f073fe13803dca207061a46e8a94f10a7b72c
 ```
 ### 2024.09.11
-
-
+1. 成功完成React与合约TodoList的所有方法交互，实现task新增和状态修改等功能
+2. 将本次的项目代码发布到仓库: <https://github.com/Risker-C/my-first-dapp>
 ### 2024.09.12
 
+1. 今日通宵加班，请假
 
 ### 2024.09.13
 
