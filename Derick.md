@@ -51,7 +51,20 @@ Aptos采用了一种改进的BFT(拜占庭容错)共识机制,称为AptosBFT或D
 ### 2024.09.09
  -  [ ] 学习[Move Tutorial](https://github.com/aptos-labs/aptos-core/tree/main/aptos-move/move-examples/move-tutorial) 前三章
 ### 2024.09.10
- -  [ ] 
+```
+module 0xCAFE::basic_coin {
+    struct Coin has key {
+        value: u64,
+    }
+
+    public entry fun mint(account: &signer, value: u64) {
+        move_to(account, Coin { value })
+    }
+}
+```
+- 创建一个move合约，定义了一个名为 basic_coin 的模块，属于地址 0xCAFE。在 Move 中，模块是代码的基本组织单位。
+- 名为 Coin 的结构体。它有一个 key 能力，意味着它可以作为全局存储中的顶级资源。结构体包含一个名为 value 的字段，类型为 u64（64位无符号整数）。
+- 定义了一个名为 mint 的公共入口函数。它有两个参数：account: &signer：代表交易发送者的签名者引用。 value: u64：要铸造的代币数量。函数体使用 move_to 操作将新创建的 Coin 资源移动到 account 的存储中。这effectively "铸造"了新的代币并将其分配给指定账户。
 ### 2024.09.11
  -  [ ] 
 ### 2024.09.12
